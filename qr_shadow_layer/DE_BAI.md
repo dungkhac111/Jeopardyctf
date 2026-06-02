@@ -30,11 +30,6 @@ http://challenge-host:8081
 ```
 
 Có thể phát cho người chơi file zip public nếu hệ thống yêu cầu attachment:
-
-```text
-qr_shadow_layer_public.zip
-```
-
 ## Ghi chú cho ban tổ chức
 
 Không đưa thư mục `solution/` cho người chơi. Thư mục này chỉ dùng cho người ra đề/chấm bài, gồm writeup chi tiết và script solve.
