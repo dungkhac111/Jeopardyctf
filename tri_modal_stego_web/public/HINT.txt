@@ -1,0 +1,2 @@
+Đừng dừng lại ở một file.
+EXIF cho phần đầu, LSB ảnh cho phần giữa, và audio spectrogram/tone bands cho phần cuối.

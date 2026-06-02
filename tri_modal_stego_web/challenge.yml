@@ -1,0 +1,18 @@
+id: 05_tri_modal_stego_web
+name: Tri-Modal Stego Web
+category: Web Steganography
+difficulty: hard
+flag: blockChainPTIT{tri_modal_stego_web}
+connection_info: http://challenge-host:8083
+files:
+  - public/HINT.txt
+  - public/README.md
+description: |
+  Một portal forensics nội bộ lưu các bằng chứng media theo case. Trang chính chỉ cho xem file public,
+  nhưng API migration cũ vẫn để lộ manifest và có lỗi đọc file tương đối.
+
+  Hãy khai thác web để lấy đủ 3 bằng chứng rồi ghép flag từ EXIF, LSB ảnh và audio spectrogram.
+hints:
+  - Một case có thể có nhiều bằng chứng hơn phần public.
+  - Metadata, bit thấp nhất và tần số âm thanh là ba kênh khác nhau.
+  - Nếu spectrogram có hai dải tần rõ ràng, hãy nghĩ đến bit 0/1 theo từng cửa sổ thời gian.

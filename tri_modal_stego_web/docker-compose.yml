@@ -1,0 +1,8 @@
+services:
+  tri-modal-stego-web:
+    build: .
+    ports:
+      - "8083:8083"
+    environment:
+      - PORT=8083
+    restart: unless-stopped
