@@ -1,0 +1,18 @@
+id: 07_badge_printer
+name: Badge Printer
+category: Web Steganography
+difficulty: medium-hard
+flag: blockChainPTIT{jwt_idor_qr_badge}
+connection_info: http://challenge-host:8085
+files:
+  - public/HINT.txt
+  - public/README.md
+description: |
+  Hệ thống in badge nội bộ cho phép guest đăng nhập để xem badge demo. JWT của hệ thống dùng cấu hình yếu,
+  và trang badge có lỗi IDOR. Queue staff chỉ hiển thị vài badge bình thường, nhưng badge admin nằm ở một ID khác.
+
+  Hãy nâng quyền vào khu staff, brute force ID badge admin, rồi quét QR để lấy flag.
+hints:
+  - JWT không phải lúc nào cũng được verify đúng cách.
+  - Queue chỉ liệt kê một phần badge, không có nghĩa là ID khác không tồn tại.
+  - Khi tìm được badge admin, QR visible là đủ.

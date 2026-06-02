@@ -1,0 +1,3 @@
+Guest token co the doc duoc bang jwt.io.
+Neu token noi rang alg=none, hay thu xem server co verify chu ky that khong.
+Queue staff chi hien badge 1 va 2. Hay thu brute force ID badge de tim admin.
