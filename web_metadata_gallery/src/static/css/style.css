@@ -1,0 +1,151 @@
+:root {
+  color-scheme: dark;
+  --bg: #101414;
+  --panel: #182020;
+  --panel-2: #202928;
+  --text: #eef6f2;
+  --muted: #9bb0aa;
+  --line: #30403d;
+  --accent: #f2c14e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.shell {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow,
+.status,
+.muted {
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(32px, 7vw, 72px);
+  line-height: 0.95;
+}
+
+.status {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.tile {
+  display: grid;
+  gap: 14px;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.tile:hover {
+  border-color: var(--accent);
+}
+
+.tile img,
+.viewer img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--panel-2);
+}
+
+.tile h2 {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.tile p,
+.meta p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.nav {
+  margin-bottom: 18px;
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.viewer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.7fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.meta {
+  padding-top: 4px;
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .viewer {
+    display: block;
+  }
+
+  .status {
+    display: inline-block;
+    margin-top: 18px;
+  }
+
+  .meta {
+    margin-top: 18px;
+  }
+}

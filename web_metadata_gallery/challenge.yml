@@ -1,0 +1,18 @@
+id: 02_web_metadata_gallery
+name: Metadata Gallery
+category: Web Steganography
+difficulty: easy-medium
+flag: blockChainPTIT{web_cache_metadata_leak}
+connection_info: http://challenge-host:8080
+files:
+  - public/HINT.txt
+  - public/README.md
+description: |
+  Một gallery nội bộ được dùng để lưu ảnh hiện trường. Giao diện chỉ hiển thị ảnh thumbnail đã được làm sạch,
+  nhưng hệ thống cache/CDN vẫn để lại vài dấu vết về bản gốc.
+
+  Hãy khai thác các manh mối từ web response và phân tích metadata file để tìm flag.
+hints:
+  - Thumbnail thường đã bị strip metadata. Bản gốc thì chưa chắc.
+  - Header HTTP đôi khi nói nhiều hơn body HTML.
+  - PNG có thể chứa các chunk chữ như tEXt/iTXt/zTXt.

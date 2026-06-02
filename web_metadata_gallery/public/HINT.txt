@@ -1,0 +1,2 @@
+Đừng chỉ nhìn ảnh được render trên trang.
+Hãy xem response headers, robots.txt, và so sánh thumbnail với file gốc.
