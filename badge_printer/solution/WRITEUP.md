@@ -66,13 +66,6 @@ base64url(header).base64url(payload).
 
 Set cookie `session` bằng token staff rồi reload.
 
-Ví dụ dùng Console:
-
-```js
-document.cookie = "session=<staff_jwt>; path=/";
-location.href = "/badges";
-```
-
 ## 7. Vào staff console
 
 Truy cập:
@@ -107,14 +100,7 @@ Thử lần lượt:
 /badge?id=4
 ...
 ```
-
-Hoặc dùng shell:
-
-```bash
-for i in $(seq 1 30); do
-  curl -s -H "Cookie: session=<staff_jwt>" "http://127.0.0.1:8085/badge?id=$i" | grep -q "Admin Night Shift" && echo "admin id: $i"
-done
-```
+Buteforce
 
 Kết quả:
 
