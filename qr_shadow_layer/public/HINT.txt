@@ -1,0 +1,2 @@
+Camera chỉ đọc được payload QR bình thường.
+Hãy tải SVG QR về và nhìn các layer/thuộc tính màu trong mã nguồn ảnh.

@@ -1,0 +1,16 @@
+id: 03_qr_shadow_layer
+name: QR Shadow Layer
+category: Web Steganography
+difficulty: medium
+flag: blockChainPTIT{qr_shadow_layer}
+connection_info: http://challenge-host:8081
+files:
+  - public/HINT.txt
+  - public/README.md
+description: |
+  Website hiển thị một QR code dùng cho việc bàn giao token nội bộ. Khi quét QR, người chơi chỉ nhận được phần đầu của flag.
+  Tuy nhiên asset web còn có một lớp dữ liệu mờ nằm chồng lên QR.
+hints:
+  - QR scan chỉ là lớp nhìn thấy được.
+  - DevTools có thể nhìn thấy nhiều lớp hơn camera.
+  - Màu gần như đen đôi khi vẫn khác nhau ở bit thấp nhất.
