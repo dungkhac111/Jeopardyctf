@@ -14,14 +14,16 @@ Mỗi challenge được đóng gói theo format:
   solution/          Writeup và script solve cho giảng viên
 ```
 
-## Danh sach challenge
+## Danh sách challenge
 
 | STT | Tên | Kỹ thuật | Flag | Độ khó CTF |
 |---|---|---|---|---|
 | 01 | Metadata Gallery | Web cache/header leak + PNG metadata `tEXt` + XOR/base64 | `blockChainPTIT{web_cache_metadata_leak}` | Dễ |
-| 02 | QR Shadow Layer | QR scan lay part 1 + SVG shadow layer encode bit bang mau `#010101/#020202` | `blockChainPTIT{qr_shadow_layer}` | Dễ |
+| 02 | QR Shadow Layer | QR scan lấy part 1 + SVG shadow layer encode bit bằng màu `#010101/#020202` | `blockChainPTIT{qr_shadow_layer}` | Dễ |
 | 03 | CSS Color Encoding | Web LFI/path traversal đọc CSS nội bộ + decode màu `#xx0000` thành ASCII | `blockChainPTIT{css_palette_lfi}` | Dễ |
 | 04 | Tri-Modal Stego Web | Web API enum + LFI lấy evidence + EXIF + PNG LSB + audio spectrogram | `blockChainPTIT{tri_modal_stego_web}` | Trung bình |
+| 05 | Blind Gallery | SQL Injection đọc bảng `images` + leak filename/passphrase + `steghide` trong JPEG | `blockChainPTIT{sqli_steghide_gallery}` | Trung bình |
+| 06 | Badge Printer | JWT `alg=none` + IDOR brute force badge admin + QR chứa flag | `blockChainPTIT{jwt_idor_qr_badge}` | Dễ |
 
 ## Gợi ý triển khai
 
@@ -46,7 +48,4 @@ Sau đó mở URL tương ứng trong `challenge.yml`, ví dụ:
 
 ```text
 http://127.0.0.1:8083
-```
-
-
 ```
