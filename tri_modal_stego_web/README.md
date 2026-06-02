@@ -184,7 +184,10 @@ for i in range(0, len(bits), 8):
     out.append(b)
 print(out.decode())
 ```
-
+hoặc dùng tool zsteg
+```text
+zsteg asset.png -E b1,b,lsb,xy
+```
 Kết quả:
 
 ```text
