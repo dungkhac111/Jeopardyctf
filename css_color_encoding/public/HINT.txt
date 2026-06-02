@@ -1,0 +1,2 @@
+Đừng chỉ nhìn màu được render.
+Hãy đọc CSS thô, lấy byte đầu tiên trong mã màu #xx0000 và chuyển từ hex sang ASCII.

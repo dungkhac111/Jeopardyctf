@@ -1,0 +1,18 @@
+id: 04_css_color_encoding
+name: CSS Color Encoding
+category: Web Steganography
+difficulty: medium
+flag: blockChainPTIT{css_palette_lfi}
+connection_info: http://challenge-host:8082
+files:
+  - public/HINT.txt
+  - public/README.md
+description: |
+  Một web preview theme nội bộ dùng CSS palette để render màu thương hiệu. Trang chính trông bình thường,
+  nhưng legacy theme loader vẫn còn một lỗi đọc file tương đối.
+
+  Hãy tìm palette nội bộ và decode dữ liệu được giấu trong mã màu CSS.
+hints:
+  - Màu CSS cũng là byte nếu bạn nhìn đúng kênh.
+  - Endpoint debug thường nói quá nhiều về đường dẫn.
+  - Với mã màu dạng #xx0000, byte đầu tiên có thể là thứ cần đọc.
