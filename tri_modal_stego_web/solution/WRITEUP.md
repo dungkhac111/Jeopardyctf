@@ -1,3 +1,4 @@
+
 # Tri-Modal Stego Web - Writeup
 
 ## 1. Khảo sát trang chính
@@ -183,7 +184,10 @@ for i in range(0, len(bits), 8):
     out.append(b)
 print(out.decode())
 ```
-
+hoặc dùng tool zsteg
+```text
+zsteg asset.png -E b1,b,lsb,xy
+```
 Kết quả:
 
 ```text
@@ -193,6 +197,7 @@ modal_stego_
 ## 12. Phân tích audio spectrogram
 
 Mở `signal.wav` bằng Audacity hoặc Sonic Visualizer, chuyển sang chế độ spectrogram.
+<img width="1191" height="182" alt="Screenshot 2026-06-02 171102" src="https://github.com/user-attachments/assets/37a3a643-07bb-4a4f-a765-f7bcb0cba377" />
 
 Sẽ thấy tín hiệu theo từng cửa sổ thời gian, chỉ xuất hiện một trong hai dải tần:
 
@@ -210,8 +215,6 @@ Mỗi bit dài khoảng:
 Trong mỗi cửa sổ sẽ có một đoạn tone ngắn rồi một khoảng lặng nhỏ, nên khi zoom ngang sẽ thấy từng cột/từng đoạn tách rõ hơn.
 
 ## 13. Decode audio để lấy phần 3
-
-Đọc từng cửa sổ 0.08s, so năng lượng ở 1200 Hz và 2400 Hz.
 
 Nếu 2400 Hz mạnh hơn thì bit là `1`, ngược lại là `0`. Ghép mỗi 8 bit thành ASCII, dừng ở NUL byte.
 
