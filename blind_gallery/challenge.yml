@@ -1,0 +1,18 @@
+id: 06_blind_gallery
+name: Blind Gallery
+category: Web Steganography
+difficulty: medium
+flag: blockChainPTIT{sqli_steghide_gallery}
+connection_info: http://challenge-host:8084
+files:
+  - public/HINT.txt
+  - public/README.md
+description: |
+  Một gallery ảnh nội bộ chỉ hiển thị ảnh public. Backend dùng SQLite và endpoint xem ảnh có lỗi SQL Injection.
+  Trong bảng images có nhiều ảnh, bao gồm một ảnh archive không public.
+
+  Hãy khai thác SQLi để tìm filename và passphrase, tải ảnh archive, rồi dùng steghide để extract flag.
+hints:
+  - Query xem ảnh cần đúng số cột khi UNION.
+  - Không phải ảnh nào trong bảng images cũng public.
+  - Description của ảnh archive có thể là chìa khóa cho steghide.

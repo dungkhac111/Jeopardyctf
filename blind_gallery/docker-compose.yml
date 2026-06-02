@@ -1,0 +1,8 @@
+services:
+  blind-gallery:
+    build: .
+    ports:
+      - "8084:8084"
+    environment:
+      - PORT=8084
+    restart: unless-stopped

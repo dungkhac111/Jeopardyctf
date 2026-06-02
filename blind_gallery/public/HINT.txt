@@ -1,0 +1,2 @@
+Gallery chỉ hiện ảnh public, nhưng database có thể biết nhiều hơn giao diện.
+Khi tìm được ảnh archive, hãy để ý description/passphrase và thử steghide.
