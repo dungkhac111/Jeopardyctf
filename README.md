@@ -16,7 +16,7 @@ Mỗi challenge được đóng gói theo format:
 
 ## Danh sach challenge
 
-| STT | Ten | Ky thuat | Flag | Do kho CTF |
+| STT | Tên | Kỹ thuật | Flag | Độ khó CTF |
 |---|---|---|---|---|
 | 01 | Metadata Gallery | Web cache/header leak + PNG metadata `tEXt` + XOR/base64 | `blockChainPTIT{web_cache_metadata_leak}` | Dễ |
 | 02 | QR Shadow Layer | QR scan lay part 1 + SVG shadow layer encode bit bang mau `#010101/#020202` | `blockChainPTIT{qr_shadow_layer}` | Dễ |
