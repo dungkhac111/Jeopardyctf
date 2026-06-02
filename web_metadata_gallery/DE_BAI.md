@@ -32,7 +32,7 @@ http://challenge-host:8080
 Có thể phát cho người chơi file zip public nếu hệ thống yêu cầu attachment:
 
 ```text
-dist/01_metadata_gallery_public.zip
+metadata_gallery_public.zip
 ```
 
 ## Ghi chú cho ban tổ chức
